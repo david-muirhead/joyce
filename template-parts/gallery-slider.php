@@ -5,10 +5,6 @@
 	$image  = $slides[0]; // get first image in the gallery [1] for second, [2] for third, and so on.
 	if( $image ) : // only show the image if it exists
 ?>
-<?php
-	$ratio = $image[height] / $image[width] * 80;
-	$ratioControl = $image[height] / $image[width] * 100 / 2;
-?>
 <?php endif; ?>
 
 </div>
