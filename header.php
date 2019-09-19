@@ -14,37 +14,38 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdn.plyr.io/3.5.2/plyr.css" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="shortcut icon" href="">
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?> id="body" data-barba="wrapper">
+	<!-- <?php if ( is_front_page() ) : ?>
+	<span id="preload">
+		<img class="noclick" src="<?php the_field('loading_animation_gif', 'option'); ?>">
+	</span>
 
-	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
-		<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
-	<?php endif; ?>
-
-	<header class="site-header" role="banner">
-		<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle(); ?>>
-			<div class="title-bar-left">
-				<button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
-				<span class="site-mobile-title title-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				</span>
-			</div>
+	<?php else: ?>
+	<span id="preload">
+		<img class="noclick" src="<?php the_field('loading_animation_gif', 'option'); ?>">
+	</span>
+	<?php endif; ?> -->
+	<header class="site-header" id="navbar" role="banner">
+		<div>
+			<a href="<?php echo esc_url( home_url( '/index' ) ); ?>" rel="index">Index</a>
 		</div>
-
-		<nav class="site-navigation top-bar" role="navigation">
-			<div class="top-bar-left">
-				<div class="site-desktop-title top-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				</div>
-			</div>
-			<div class="top-bar-right">
-				<?php foundationpress_top_bar_r(); ?>
-
-				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
-					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-				<?php endif; ?>
-			</div>
-		</nav>
-
+		<div>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">JN.H</a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Joyce N. Ho</a>
+		</div>
+		<div>
+			<a href="<?php echo esc_url( home_url( '/about' ) ); ?>" rel="about">About</a>
+		</div>
 	</header>
+	<main id="barbadook" data-barba="container" data-barba-namespace="<?php if ( is_single() ) {
+   echo 'single';
+ } ?>">

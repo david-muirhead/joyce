@@ -70,6 +70,7 @@
 @import "modules/content";
 @import "modules/footer";
 @import "modules/editor-style";
+@import "modules/preload";
 
 // Components
 @import "components/buttons";
@@ -77,7 +78,105 @@
 @import "components/featured-image";
 @import "components/dividers";
 @import "components/links";
+@import "components/slider";
 
 // Templates
 @import "templates/front";
 @import "templates/kitchen-sink";
+@import "templates/single";
+@import "templates/about";
+
+@import "../../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
+
+@font-face {
+    font-family: 'mgd-rotter-regular';
+    src: url('../fonts/mgd-rotter-regular/MGDRotter-Regular.eot');
+    src: url('../fonts/mgd-rotter-regular/MGDRotter-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/mgd-rotter-regular/MGDRotter-Regular.woff2') format('woff2'),
+         url('../fonts/mgd-rotter-regular/MGDRotter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'lunchtype22regular';
+    src: url('../fonts/lunchtype/lunchtype22-regular-webfont.eot');
+    src: url('../fonts/lunchtype/lunchtype22-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lunchtype/lunchtype22-regular-webfont.woff2') format('woff2'),
+         url('../fonts/lunchtype/lunchtype22-regular-webfont.woff') format('woff'),
+         url('../fonts/lunchtype/lunchtype22-regular-webfont.ttf') format('truetype'),
+         url('../fonts/lunchtype/lunchtype22-regular-webfont.svg#lunchtype22regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'lunchtype22medium';
+    src: url('../fonts/lunchtype/lunchtype22-medium-webfont.eot');
+    src: url('../fonts/lunchtype/lunchtype22-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lunchtype/lunchtype22-medium-webfont.woff2') format('woff2'),
+         url('../fonts/lunchtype/lunchtype22-medium-webfont.woff') format('woff'),
+         url('../fonts/lunchtype/lunchtype22-medium-webfont.ttf') format('truetype'),
+         url('../fonts/lunchtype/lunchtype22-medium-webfont.svg#lunchtype22medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'lunchtype22light';
+    src: url('../fonts/lunchtype/lunchtype22-light-webfont.eot');
+    src: url('../fonts/lunchtype/lunchtype22-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lunchtype/lunchtype22-light-webfont.woff2') format('woff2'),
+         url('../fonts/lunchtype/lunchtype22-light-webfont.woff') format('woff'),
+         url('../fonts/lunchtype/lunchtype22-light-webfont.ttf') format('truetype'),
+         url('../fonts/lunchtype/lunchtype22-light-webfont.svg#lunchtype22light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+#tinymce {
+ color: black;
+ p, a{
+   a {
+     color: black;
+   }
+   color: black;
+ }
+}
+
+p, a{
+    @include breakpoint(small only) {
+      font-size: 16px;
+    }
+}
+
+a {
+  text-decoration: underline;
+  display: inline-block;
+  // p {
+  //   text-decoration: underline;
+  //   display: inline-block;
+  // }
+}
+
+h1,h2 {
+    @include breakpoint(small only) {
+        line-height: 1.2;
+
+    }
+}
+
+h2 {
+    font-family: 'mgd-rotter-regular';
+    letter-spacing: -0.05em;
+}
+
+h5 {
+   font-family: 'lunchtype22regular';
+   color: $medium-gray;
+   margin-bottom: 0;
+}

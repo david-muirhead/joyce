@@ -15,36 +15,39 @@
 
 get_header(); ?>
 
-<div class="main-container">
-	<div class="main-grid">
-		<main class="main-content">
-		<?php if ( have_posts() ) : ?>
+<nav>
+	<ul id="list">
+	<?php
+		$args = array(
+		  'numberposts' => -1
+		);
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-			<?php endwhile; ?>
+		$posts = get_posts($args);
 
-			<?php else : ?>
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+		foreach($posts as $key=>$post){
+		  $list .= '<li><a class="cta" hover-data="'.$post->ID.'" href="'. get_permalink() .'" data-video="'.get_field('featured_video_webm').'" data-poster="'.get_the_post_thumbnail_url().'"><span class="title">'.$post->post_title.' </span> <span class="category">'.get_the_category( $id )[0]->name .'</span> <span class="year">'.get_field('year').'</span></a></li>';
+		}
 
-			<?php endif; // End have_posts() check. ?>
+		echo $list;
+	?>
+	</ul>
+</nav>
 
-			<?php /* Display navigation to next/previous pages when applicable */ ?>
-			<?php
-			if ( function_exists( 'foundationpress_pagination' ) ) :
-				foundationpress_pagination();
-			elseif ( is_paged() ) :
-			?>
-				<nav id="post-nav">
-					<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-					<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-				</nav>
-			<?php endif; ?>
+<div id="video-wraps">
+	<?php
+		$argsVid = array(
+			'numberposts' => -1
+		);
 
-		</main>
-		<?php get_sidebar(); ?>
+		$posts = get_posts($argsVid);
 
-	</div>
+		foreach($posts as $keyVid=>$posto){
+			$listVid .= '<video preload="auto" class="cta" autoplay="" muted="" loop="" id="'.$posto->ID.'" poster="'.get_the_post_thumbnail_url($posto->ID).'" src="'.get_field('featured_video_mp4', $posto->ID).'" ></video>';
+		}
+
+		echo $listVid;
+	?>
 </div>
+
+
 <?php get_footer();

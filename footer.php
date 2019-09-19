@@ -7,18 +7,9 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-?>
-
-<footer class="footer-container">
-	<div class="footer-grid">
-		<?php dynamic_sidebar( 'footer-widgets' ); ?>
-	</div>
-</footer>
-
-<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
-	</div><!-- Close off-canvas content -->
-<?php endif; ?>
-
-<?php wp_footer(); ?>
+ ?>
+</main>
+<?php wp_footer();?>
+		<script src="https://cdn.jsdelivr.net/npm/vimeo-froogaloop@0.1.0/froogaloop.min.js"></script>
 </body>
 </html>

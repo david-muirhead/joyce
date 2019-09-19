@@ -1,3 +1,8 @@
+
+footer {
+  color: $white;
+  size:20px;
+}
 .footer-container {
   @include xy-grid-container;
   border-top: 1px solid $medium-gray;
@@ -19,5 +24,81 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+}
+.next-post {
+  width: 100%;
+  position: relative;
+  height: 330px;
+  @include breakpoint(medium) {
+      height: 400px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+  }
+  div  {
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top:38%; left: 0; bottom: 0; right: 0;
+  }
+  a {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    &:hover {
+      header {
+        video {
+        }
+      }
+    }
+    header {
+      height: 100%;
+      video {
+        @include breakpoint(small only) {
+          /* Make video to at least 100% wide and tall */
+          min-width: 100%;
+          min-height: 100%;
+
+          /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+          width: auto !important;
+          height: auto;
+
+          /* Center the video */
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+        @include breakpoint(medium) {
+          opacity: 0.5;
+          position: relative;
+           top: 50%;
+           transform: translateY(-50%);
+        }
+
+      }
+    }
+    h2 {
+    }
+  }
+  img {
+    display: block;
+    width: 100vw;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+.front-foot {
+
+  a {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 80px;
+    @include breakpoint(medium) {
+      padding-top: 160px;
+    }
   }
 }

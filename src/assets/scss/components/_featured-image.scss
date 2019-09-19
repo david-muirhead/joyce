@@ -1,14 +1,140 @@
 .featured-hero {
+  overflow: hidden;
+  position: relative;
+  display: block;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: rem-calc(100);
-
   @include breakpoint(medium) {
-    height: rem-calc(200);
+    margin-top: 0;
+  }
+  &.front-vid {
+    margin-top: 0;
+    video {
+      display: block;
+      width: 100%;
+      height: auto   !important;
+    }
+  }
+  &:not(.front-vid) {
+    .helper {
+        width: 100%;
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    img {
+      width: 100%;
+        vertical-align: middle;
+    }
+    @include breakpoint(medium) {
+      height: rem-calc(600);
+    }
+    .titles {
+      @include xy-cell(12);
+      position: relative;
+      display: block;
+      margin-top: -2.3rem;
+      @include breakpoint(medium) {
+        position: absolute;
+        padding-bottom: 3rem;
+        @include xy-grid-container;
+        @include xy-grid();
+      }
+      h1,h2 {
+        @include xy-cell(12);
+      }
+    }
+    @include breakpoint(xlarge) {
+      height: rem-calc(700);
+      margin: 0 auto;
+      // max-width: 2100px;
+      left: 0;
+      right:0;
+    }
+    // @include breakpoint(xxlarge) {
+    //   height: rem-calc(1000);
+    // }
+    video {
+      width: 100%;
+    }
+    @include breakpoint(medium) {
+      .video-contain {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+      }
+      video {
+        width: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        min-height: 50%;
+        min-width: 50%;
+      }
+    }
+  }
+}
+
+.titles {
+  @include breakpoint(medium) {
+    float: left;
+    @include xy-grid-container;
+    @include xy-grid();
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:0 0 40px 40px;
   }
 
-  @include breakpoint(xlarge) {
-    height: rem-calc(400);
+  h1 {
+
   }
+  h2 {
+    width: 100%;
+  }
+}
+
+.footer-titles {
+  float: left;
+  @include xy-grid-container;
+  @include xy-grid();
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+  @include breakpoint(medium) {
+    top: 40%;
+  }
+  margin: auto;
+  text-align: center;
+  min-height: 100px;
+  video {
+
+  }
+  h1{
+    width: 100%;
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+    margin: 0 auto;
+    text-decoration: underline;
+  }
+}
+
+.featured-hero-home {
+  position: relative;
+  height: 0px;
+  img {
+
+  }
+
 }

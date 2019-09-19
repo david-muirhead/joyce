@@ -1,0 +1,717 @@
+  // Page header
+  hr {
+    width:30px;
+    align: left;
+    margin-left: 0;
+    border-bottom: 2px solid $dark-gray;
+  }
+
+body.page-template-front{
+    .front-hero {
+      position: relative;
+      background:#525355;
+      width: 100%;
+      display: inline-block;
+      #intro {
+        @include grid-row();
+        display: block;
+        width: 100%;
+        color: white;
+        margin-top: 50px;
+        height: 100%;
+        position: relative;
+        @include breakpoint(medium) {
+          margin-top: 150px;
+        }
+        div{
+          width: 100%;
+          padding-bottom: 5rem;
+          @include breakpoint(medium) {
+            @include grid-column(6);
+          }
+          @media (max-width: 1000px) and (min-width: 638px){
+            width: 70%;
+          }
+        }
+        h1, span {
+           @include grid-column(12);
+
+        }
+
+        button {
+          margin: 30px 0;
+          float: left !important;
+          display: inline-block;
+          text-transform: uppercase;
+          box-shadow: 0 0 10px white;
+        }
+
+      }
+      img {
+        position: relative;
+        display: block;
+        @include grid-column(10);
+        float: right;
+        @include breakpoint(medium) {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding: 0!important;
+          @include grid-column(4);
+        }
+      }
+      .overlay{
+        position: absolute;
+        background-size: cover;
+        background-position: right 26% bottom 0px;
+        @include breakpoint(medium) {
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+        }
+        height: 100%;
+        width: 100%;
+        display: block;
+      }
+
+      h1 {
+        color: #fff;
+        font-weight: 500;
+      }
+
+      h4 {
+        color: #fefefe;
+        font-weight: 300;
+        font-size: 1.3125rem;
+      }
+    }
+
+    .logos{
+        @include grid-row();
+        position: relative;
+        z-index: 99;
+        margin-top: -50px;
+        div {
+          margin-left: 30px;
+          @include grid-column(12);
+          background: #e6e7e8;
+          border-radius: 0px 0px 0px 20px;
+          -moz-border-radius: 0px 0px 0px 20px;
+          -webkit-border-radius: 0px 0px 0px 20px;
+        }
+        &:before {
+          content: ' ';
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          right: -99%;
+          top: 0%;
+          background: #E6E7E8;
+        }
+        @include breakpoint(medium) {
+
+        }
+        hr {
+          border:none;
+          border-bottom: solid grey 1px;
+          @include breakpoint(medium) {
+            display: none;
+          }
+        }
+        img{
+          &:nth-child(2){
+            border-right: solid grey 2px;
+            margin-bottom: 20px;
+          }
+          &:nth-child(3){
+
+            margin-bottom: 20px;
+          }
+          &:nth-child(5){
+            border-right: solid grey 2px;
+          }
+          &:nth-child(6){
+            border-right: solid grey 2px;
+          }
+          &:nth-child(7){
+            display: none;
+          }
+          @include grid-column(6);
+
+        }
+        span{
+          text-transform: uppercase;
+          padding-left: 0px;
+          padding-bottom: 20px;
+        }
+        @include breakpoint(small) {
+
+          span{
+            @include grid-column(12);
+            text-align: center;
+            padding-top: 20px;
+
+          }
+          img {
+            width: 50%;
+            padding:0;
+            margin-bottom: 20px;
+            border: none;
+          }
+          hr {
+            width: 100%;
+          }
+
+        }
+
+        @include breakpoint(medium) {
+
+          span{
+            padding-top: 10px;
+            margin-top:2.7%;
+            @include grid-column(2);
+          }
+          img {
+            margin: 4% 0;
+            float: left !important;
+            width: calc(100% / 6);
+            padding: 0 !important;
+            &:nth-child(5){
+              border-left: solid grey 2px;
+            }
+
+          }
+          h2 {
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+          }
+
+          h4 {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: #777;
+            margin-bottom: 2rem;
+          }
+        }
+        @include breakpoint(medium) {
+          img {
+            &:nth-child(7){
+              display: block !important;
+            }
+          }
+        }
+        @include breakpoint(large) {
+          img {
+            margin:2.4% 0;
+            &:nth-child(7){
+              display: block !important;
+            }
+          }
+        }
+      }
+
+    #platform, #platform-two {
+      @include grid-row();
+      position: relative;
+      display: block;
+      margin-top:30px;
+      min-height: 500px;
+      @include breakpoint(medium) {
+        margin-top:80px;
+      }
+      .h-one {
+        color: $blue;
+        // @media (max-width: 640px) {
+        //   margin-bottom: 30px;
+        // }
+      }
+      p {
+        padding: 20px 0;
+        margin: 0;
+      }
+    }
+    #platform-two {
+      img {
+        @include grid-column(12);
+        position: relative;
+        height: 100%;
+        @include breakpoint(medium) {
+          @include grid-column(4);
+          float: right !important;
+        }
+        @include breakpoint(large) {
+          @include grid-column(6);
+          float: right !important;
+        }
+      }
+      div {
+        @include grid-column(12);
+        float: left !important;
+        @include breakpoint(medium) {
+          @include grid-column(7);
+             float: left !important;
+        }
+        @include breakpoint(large) {
+          @include grid-column(5);
+             float: left !important;
+        }
+      }
+    }
+    #platform {
+      img {
+        @include grid-column(12);
+        position: relative;
+        height: 100%;
+        @include breakpoint(medium) {
+          @include grid-column(6);
+          float: left !important;
+        }
+        @include breakpoint(large) {
+          @include grid-column(5);
+          @include grid-column-offset(1);
+          float: left !important;
+        }
+      }
+      div {
+        @include grid-column(12);
+        float: right;
+        @include breakpoint(medium) {
+          @include grid-column(6);
+             float: right;
+        }
+        @include breakpoint(large) {
+          @include grid-column(5);
+             float: right;
+        }
+      }
+    }
+    .industries {
+      border-top:solid 1px $medium-gray;
+      width: 100%;
+      display: inline-block;
+      position: relative;
+      @include breakpoint(medium) {
+      }
+      .row {
+        @include grid-row();
+
+      }
+      // .overlay{
+      //   width: 50%;
+      //   position: absolute;
+      //   background: url('../images/demo/traktor.jpg') bottom center;
+      //   background-size: cover;
+      //   -webkit-background-size: cover;
+      //   -moz-background-size: cover;
+      //   -o-background-size: cover;
+      //   height: 100%;
+      //   width: 50%;
+      //   right: 0;
+      //   z-index: -99;
+      //   display: none;
+      //   @include breakpoint(medium) {
+      //     display: block;
+      //   }
+      //   &:after  {
+      //     background: #103a60;
+      //     mix-blend-mode: multiply;
+      //     content: '';
+      //     display: block;
+      //     position: absolute;
+      //     height: 100%;
+      //     width: 100%;
+      //     top: 0px;
+      //     float: left;
+      //   }
+      // }
+      // .tractor {
+      //   display: inline-block;
+      //   width: 50%;
+      //   background: $blue;
+      //   padding-right:  calc(50% - 33.333333rem);
+      //   padding-bottom: 50%;
+      //   height: 0px;
+      //   position: relative;
+      //   margin-left:auto !important;//Whatever u want to overwrite
+      //   margin-right:auto !important;
+      //   left: 0;
+      //   float: right;
+      //   bottom: 0;
+      //   z-index: -3;
+      // }
+
+      .intro {
+        z-index: -1;
+        @include grid-column(12);
+        @include breakpoint(medium) {
+          @include grid-column(12);
+        }
+        position: relative;
+        padding-right: 0 !important;
+        padding-top: 2rem;
+        @include breakpoint(medium) {
+          padding-top: 120px;
+        }
+        hr{
+          color: $dark-gray;
+        }
+        h1{
+          color: $orange;
+          @include breakpoint(medium) {
+            color: $blue;
+            display: inline-block;
+            float: left;
+            padding-right: 40px;
+            margin-right: 40px;
+            border-right: solid 2px $light-gray;
+          }
+        }
+        h2{
+          width: 80%;
+          @include breakpoint(medium) {
+            color: $orange;
+            padding-top: 16px;
+          }
+          font-family: 'AvertaStdPE-Semibold', sans-serif;
+        }
+      } // intro
+      .links, .links-title {
+        position: relative;
+        width: 100%;
+        float: left;
+        display: inline-block;
+        margin-bottom: 70px;
+        ul {
+            list-style-type: none;
+          li {
+            padding-left: 0px;
+            float: left !important;
+            a{
+              padding-left: 0px;
+              &:after {
+                font-family: 'icomoon' !important;
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                content: "\e409";
+                float: right;
+                color: $light-blue;
+                width: 40px;
+                height: 40px;
+                border: solid 2px $light-blue;
+                border-radius: 10px 0px 10px 0px;
+                -moz-border-radius: 10px 0px 10px 0px;
+                -webkit-border-radius: 10px 0px 10px 0px;
+                padding: 4px 4px;
+                font-size: 30px;
+              }
+            }
+          }
+        }
+      }
+      .links {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        ul {
+          margin-left: 0;
+            @include breakpoint(medium) {
+              li:nth-child(1n+9) {
+                a {
+                  border-bottom: none;
+                }
+              }
+            }
+          li {
+            @include grid-column(12);
+            @include breakpoint(medium) {
+              @include grid-column(3);
+            }
+            a {
+              padding: 20px;
+              @include grid-column-collapse;
+              width: 100%;
+              display: inline-block;
+              font-family: AvertaStdPE-Regular;
+              font-size: 18px;
+              color: $dark-gray;
+              border-bottom: solid 1px $medium-gray;
+
+            }
+          }
+        }
+      }
+    } // industries
+    // remove when industries is added
+    .break {
+      height: 0;
+      max-width: 100%;
+      margin-bottom: 120px;
+      border: none;
+    }
+    //end
+    #case-study {
+      @include grid-row();
+      @include grid-column-gutter();
+      header {
+          @include grid-column(12);
+          @include breakpoint(medium) {
+            @include grid-column(6);
+             margin-left:30px;
+              border-radius: 25px 0px 25px 0px;
+              -moz-border-radius: 25px 0px 25px 0px;
+              -webkit-border-radius: 25px 0px 25px 0px;
+          }
+          margin-top: 150px;
+          margin-bottom:-40px;
+          z-index: 2;
+          position: relative;
+
+          margin-right: 50%;
+          padding-top: 25px;
+          padding-bottom: 20px;
+          background: $light-gray;
+          border-radius: 25px 0px 0px 0px;
+          -moz-border-radius: 25px 0px 0px 0px;
+          -webkit-border-radius: 25px 0px 0px 0px;
+          margin-top: -60px;
+          img, .h4, a {
+            position: relative;
+            display: inline-block;
+            float: left;
+          }
+          h4:first-child {
+            display: inline-block;
+            width: 100%;
+            color: $dark-gray;
+            padding-top: 10px;
+            @include breakpoint(medium) {
+              width: 160px;
+            }
+          }
+          .button {
+            color: $light-blue;
+            background: transparent;
+            border: solid 1px $light-blue;
+            margin-bottom: 0px;
+          }
+          img {
+            opacity: 0.6;
+            width: 35%;
+            margin: 5px 30px 0 10px;
+            color: white;
+            @include breakpoint(medium) {
+
+            }
+          }
+        }
+        .quick-numbers {
+          padding-top: 40px;
+          position: relative;
+          @include grid-column(12);
+          @include grid-column-gutter();
+          background: url('../images/demo/traktor.jpg') center center;
+          background-size: cover;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          overflow: hidden;
+          border-radius: 0px 25px 0px 25px;
+          -moz-border-radius: 0px 25px 0px 25px;
+          -webkit-border-radius: 0px 25px 0px 25px;
+          &:after  {
+            z-index: 0;
+            background: #103a60;
+            mix-blend-mode: multiply;
+            content: '';
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0px;
+            left: 0;
+            float: left;
+            // @include breakpoint(medium) {
+            //   display: none;
+            // }
+          }
+          @include breakpoint(medium) {
+            padding: 80px 0px 40px;
+            color: white;
+            @include grid-column(12);
+          }
+          img, h4, .button, div {
+            z-index: 2;
+            position: relative;
+          }
+          div:nth-child(3) {
+            border: none;
+          }
+          div {
+            display: block;
+            position: relative;
+            float: left;
+            @include grid-column(12);
+            border-bottom: solid 1px white;
+            @include breakpoint(medium) {
+              @include grid-column(4);
+              border-bottom:none;
+              border-right: solid 1px white;
+            }
+
+            margin-top:20px;
+            margin-bottom:20px;
+            .h3 {
+              width: 80%;
+              margin: 0 auto;
+              text-align: center;
+              padding-bottom: 30px;
+              @include breakpoint(medium) {
+
+              }
+              color: white;
+              display:block;
+
+            }
+            h1 {
+              @include grid-column(12);
+              @include grid-column-collapse;
+              text-align: center;
+              margin-top:0px;
+              color: white;
+              display: inline-block;
+              float: left;
+              &:after {
+                content:"%";
+              }
+            }
+          }
+        }
+    }
+  #recent {
+    background: $light-gray;
+    position: relative;
+    bottom: 0;
+    .heading {
+      @include grid-column(12);
+      margin-top: 30px;
+      margin-bottom: 30px;
+      @include breakpoint(large) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+      position: relative;
+      .heading-subtext {
+        position: relative;
+        @include breakpoint(large) {
+          transform: translateY(13%);
+        }
+      }
+    }
+    .author {
+      background: $light-blue;
+      display: inline-block;
+      bottom: 0;
+      position: absolute;
+      margin-bottom:0;
+      color: white;
+      padding: 10px;
+      border-radius:0px 10px 0px 0px;
+      -moz-border-radius:0px 10px 0px 0px;
+      -webkit-border-radius:0px 10px 0px 0px;
+    }
+    br {
+      display: none;
+      @include breakpoint(large) {
+        display: block;
+      }
+    }
+    .h-one {
+      color: $blue;
+      display: block;
+      padding-right: 15px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      @include breakpoint(large) {
+        display: inline-block;
+        color: $blue;
+        border-right: solid 1px $dark-gray;
+      }
+
+    }
+    .h2 {
+      padding-top: 15px;
+      color: $orange;
+      display: inline-block;
+      @include breakpoint(large) {
+        padding-top: 0px;
+        padding-left: 15px;
+      }
+    }
+    .posts {
+      @include grid-column(12);
+      padding: 0 !important ;
+      div {
+        @include grid-column(12);
+        @include breakpoint(medium) {
+          @include grid-column(6);
+        }
+        @include breakpoint(large) {
+          @include grid-column(3);
+        }
+        span {
+          &.post-image {
+            width: 100%;
+            padding-bottom: 75%;
+            display: inline-block;
+            position: relative;
+            height: 0;
+            border-radius: 1px;
+            opacity: .9;
+            transition: opacity 500ms ease;
+            &:hover {
+              transition: opacity 500ms ease;
+              opacity: 1;
+            }
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        a {
+          width:  calc(100%);
+          font-family: 'AvertaStdPE-Semibold', sans-serif;
+          font-size: 20px;
+          color: $dark-gray;
+          display: inline-block;
+          position: relative;
+          margin-bottom: 20px;
+          div {
+            margin-right: -40px;
+            top: 0;
+            right: 0;
+            float: right;
+            position: absolute;
+            color: $blue;
+            width: 40px;
+            height: 40px;
+            border: solid 2px $blue;
+            border-radius: 10px 0px 10px 0px;
+            -moz-border-radius: 10px 0px 10px 0px;
+            -webkit-border-radius: 10px 0px 10px 0px;
+            padding:4px 4px;;
+            font-size: 30px;
+            &:hover {
+              span {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,22 @@
 $dark-nav-color: #2C3840;
+
+:not(#tinymce) {
+  &::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: rgba(255, 255, 255, 0.99);
+  }
+  &::selection {
+    color: black;
+    background: rgba(255, 255, 255, 0.99);
+  }
+}
+body#tinymce {
+  ::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: rgba(225, 254, 248, 0.51);
+  }
+  ::selection {
+    color: black;
+    background: rgba(225, 254, 248, 0.51);
+  }
+}

@@ -52,3 +52,13 @@ if ( ! function_exists( 'foundationpress_theme_support' ) ) :
 
 	add_action( 'after_setup_theme', 'foundationpress_theme_support' );
 endif;
+
+/* Create Options pages for Theme fields and options */
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Load Animation Settings',
+		'menu_title' 	=> 'Load Animation Settings',
+		'menu_slug' 	=> 'load-animation-settings',
+	));
+}

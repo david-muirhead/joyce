@@ -1,54 +1,62 @@
+
 .main-container {
   @include xy-grid-container;
+  @include breakpoint(medium) {
+    margin-top: 50px;
+  }
+}
+.entry-content {
+  // @include xy-cell(12);
+}
+#video-wraps {
+  @include hide-for(small only);
+  display: block;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    &.hover {
+      opacity: 1;
+    }
+
+    /*
+    Nope =(
+    margin-left: -25%;
+    margin-top: -25%;
+    */
+
+    /*
+    Yep!
+    */
+    transform: translate(-50%, -50%);
+
+    /*
+    Not even necessary really.
+    e.g. Height could be left out!
+    */
+    width: 50%;
+  }
 }
 
-.main-grid {
-  @include xy-grid();
-  margin-top: 1rem;
-
-  @include breakpoint(medium) {
-    margin-top: 3rem;
-  }
-
-  &.sidebar-left {
-    // Place the sidebar below main content on small screens ...
-    @include breakpoint(small) {
-      .main-content { order: 1; }
-      .sidebar { order: 2; }
-    }
-
-    // ... and to the left on medium-up screens, when using the sidebar-left template
-    @include breakpoint(medium) {
-      .main-content { order: 2; }
-      .sidebar { order: 1; }
-    }
-  }
-
-  // Full width template
-  .main-content-full-width {
-    @include xy-cell(12);
-  }
-
-  // Default template
-  .main-content {
-    @include breakpoint(small) {
-      @include xy-cell(12);
-    }
-
-    @include breakpoint(medium) {
-      @include xy-cell(8);
-    }
-  }
-
-  .sidebar {
-    @include breakpoint(small) {
-      @include xy-cell(12);
-    }
-
-    @include breakpoint(medium) {
-      @include xy-cell(4);
-      margin-top: 1rem;
-    }
-
-  }
+// Optional style
+@mixin transition($property...) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -ms-transition: $property; /* IE10 is actually unprefixed */
+  -o-transition: $property;
+  transition: $property;
+}
+@mixin translate-y($value) {
+  -webkit-transform: translateY($value);
+  -moz-transform: translateY($value);
+  -ms-transform: translateY($value);
+  -o-transform: translateY($value);
+  transform: translateY($value);
 }

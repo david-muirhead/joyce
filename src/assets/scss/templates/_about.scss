@@ -1,0 +1,159 @@
+.about-head {
+	padding-top: 0px;
+	@include breakpoint(medium) {
+		padding-top: 180px;
+	}
+	@include xy-grid-container();
+	@include xy-grid();
+
+	img {
+		height: 100%;
+		@include breakpoint(small only) {
+			width: 50%;
+			margin: 80px auto 20px;
+		}
+
+		@include breakpoint(medium) {
+    	@include xy-cell(4, $gutters:0);
+	  }
+	}
+	div	{
+    @include breakpoint(small only) {
+      padding-top: 30px;
+    }
+		width:100%;
+		@include breakpoint(medium) {
+			@include xy-cell(7);
+			@include xy-cell-offset(1);
+	    }
+		p {
+			color: $white;
+			@include breakpoint(small only) {
+					font-size: 20px;
+			}
+		}
+		span {
+			width: 100%;
+			a {
+			    display: inline-block;
+			    margin-bottom: 9px;
+			    line-height: 20px;
+			    text-decoration: underline;
+					&::after {
+						width: 100px;
+					  content: ",";
+					}
+			}
+			a:last-child {
+				&::after {
+					display:none;
+					width: 100px;
+					content: ",";
+				}
+			}
+		}
+	}
+
+}
+.about-main {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	@include breakpoint(medium) {
+		padding-top: 180px;
+		padding-bottom: 180px;
+	}
+	@include xy-grid-container();
+	@include xy-grid();
+	.plug {
+		width: 100%;
+		@include breakpoint(medium) {
+			div {
+				padding-bottom: 50px;
+			}
+    }
+    margin-top: 150px;
+		color: white;
+		font-size: 16px;
+		p {
+			margin: 0;
+		}
+	}
+	.awards-features {
+		width: 100%;
+		@include breakpoint(medium) {
+			div {
+				padding-bottom: 50px;
+				a {
+					display: block;
+				}
+			}
+			@include xy-cell(4, $gutters:0);
+		}
+	}
+
+	.list-left{
+		width: 100%;
+		@include breakpoint(medium) {
+			@include xy-cell(4, $gutters:0);
+		}
+	}
+	.list-right {
+		width: 100%;
+		@include breakpoint(medium) {
+			@include xy-cell(7);
+			@include xy-cell-offset(1);
+		}
+	}
+	.list-left,.list-right {
+		.list {
+			width: 100%;
+			float: left;
+			a, p{
+				clear: left;
+			  float: left;
+			}
+		}
+	}
+	.awards-features {
+		width: 100%;
+		@include breakpoint(medium) {
+			div {
+				padding-bottom: 50px;
+				a {
+					display: block;
+				}
+			}
+			@include xy-cell(4, $gutters:0);
+	  }
+	}
+	.speaking-engagements-etc {
+		width: 100%;
+		@include breakpoint(medium) {
+			div {
+				padding-bottom: 50px;
+			}
+			@include xy-cell(7);
+			@include xy-cell-offset(1);
+	    }
+	}
+	.speaking-engagements-etc,.awards-features,.list-left,.list-right {
+
+		div {
+			padding-bottom: 25px;
+			h5,p {
+	      margin-bottom: 0;
+	      font-size: 16px;
+	      color: $white;
+	    }
+			h5 {
+				color: $medium-gray;
+			}
+			p {
+			}
+			a {
+				text-decoration: underline;
+			}
+
+		}
+	}
+}

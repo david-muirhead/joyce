@@ -10,30 +10,19 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
-	<?php
-		if ( is_single() ) {
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		} else {
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		}
-	?>
-		<?php foundationpress_entry_meta(); ?>
-	</header>
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
-	</div>
-	<footer>
-		<?php
-			wp_link_pages(
-				array(
-					'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ),
-					'after'  => '</p></nav>',
-				)
-			);
-		?>
-		<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
-	</footer>
-</article>
+<?php
+	// are there any rows within within our flexible content?
+	if( have_rows('home_layout') ):
+
+		// loop through all the rows of flexible content
+		while ( have_rows('home_layout') ) : the_row();
+
+			// GALLERY
+			if( get_row_layout() == 'select_home_post' ) {
+				get_template_part( 'template-parts/home-post', '' );
+			} elseif( get_row_layout() == 'select_home_secondary' ) {
+				get_template_part( 'template-parts/home-gif', '' );
+			} 
+		endwhile; // close the loop of flexible content
+	endif; // close flexible content conditional
+?>
