@@ -364,7 +364,6 @@ footer {
       }
 			@extend .transition;
 			opacity: 1;
-      transform: scaleY(1);
 			margin-top: 14px;
 			z-index: 2;
 			h5 {
@@ -428,9 +427,6 @@ footer {
             opacity: 1;
             display: block;
           }
-          transform: scaleY(0);
-          transform-origin: top;
-          transition: transform 0.26s ease;
           opacity: 0;
           display: none;
 
