@@ -2,8 +2,6 @@
 // If a featured image is set, insert into layout and use Interchange
 // to select the optimal image size per named media query.
 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-$url = $thumb['0'];
-$ratio = $thumb[2] / $thumb[1] * 100;
 if( get_field('featured_video_webm') ): ?>
 	<header class="featured-hero">
 	<div class="video-contain"><video id="target_video" loop muted playsinline poster="<?=$url?>">
