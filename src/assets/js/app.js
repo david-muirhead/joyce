@@ -54,7 +54,7 @@ function videos() {
         $('.message').append('Autoplay was successfull.')
       }).catch(error => {
         console.log('   // Autoplay was prevented.');
-        $('video').attr('src', '');
+        $('.nope').attr('src', '');
         $('#player-loop').closest('#full-video').remove();
         $('#player-loop').remove();
         $('.message').append('Autoplay was prevented. LOW POWER MODE')
