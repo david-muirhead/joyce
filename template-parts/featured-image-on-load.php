@@ -3,7 +3,6 @@
 // to select the optimal image size per named media query.
 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 $url = $thumb['0'];
-$ratio = $thumb[2] / $thumb[1] * 100;
 if( get_field('featured_video_webm') ): ?>
 	<header class="featured-hero">
 	<div id="target_video" class="video-contain"><video loop muted playsinline poster="<?=$url?>">
@@ -24,7 +23,7 @@ elseif ( has_post_thumbnail( $post->ID ) ) : ?>
 
 			<img class="lazy" src="<?=$url?>" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 <?php else  :?>
-	<span class="noimg"></span>
+	<span class="noimg">
 <?php endif;?>
 <span class="titles">
 <?php
