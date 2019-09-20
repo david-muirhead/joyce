@@ -47,7 +47,7 @@ function general() {
 };
 
 function videos() {
-  if ($("video").not('.cta').length > 0){
+  if ($("video").not('.cta, #player').length > 0){
     var promise = $('video').get(0).play();
     if (promise !== undefined) {
       promise.then(_ => {
