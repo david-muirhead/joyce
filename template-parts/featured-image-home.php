@@ -3,8 +3,6 @@
 // to select the optimal image size per named media query.
 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 $url = $thumb['0'];
-$ratio = $thumb[2] / $thumb[1] * 100;
-
 if( get_field('featured_video_webm') ): ?>
 	<header class="featured-hero front-vid">
 	<video id="target_video" loop muted playsinline src="<?php the_field('featured_video_mp4'); ?>" type="video/mp4" poster="<?=$url?>">

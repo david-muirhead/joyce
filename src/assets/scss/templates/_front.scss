@@ -103,10 +103,12 @@
 
         &:hover {
           video, img {
-            opacity: 0.4;
-            -webkit-transition: opacity 0.1s ease-in-out;
-            -moz-transition: opacity 0.1s ease-in-out;
-            transition: opacity 0.1s ease-in-out;
+            @include breakpoint(medium) {
+              opacity: 0.4;
+              -webkit-transition: opacity 0.1s ease-in-out;
+              -moz-transition: opacity 0.1s ease-in-out;
+              transition: opacity 0.1s ease-in-out;
+            }
           }
         }
         .hover {
