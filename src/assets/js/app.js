@@ -45,6 +45,7 @@ function general() {
       lazyLoadInstance.update();
   }
 };
+
 function videos() {
   if ($("video").not('.cta').length > 0){
     var promise = $('video').get(0).play();
@@ -54,6 +55,8 @@ function videos() {
       }).catch(error => {
         console.log('   // Autoplay was prevented.');
         $('video').attr('src', '');
+        $('#player-loop').closest('#full-video').remove();
+        $('#player-loop').remove();
         $('.message').append('Autoplay was prevented. LOW POWER MODE')
       });
     }

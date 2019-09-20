@@ -6,6 +6,5 @@
 	id="player"
 	controls
 	<?php endif; // end of if field_name logic ?> src="<?php echo the_sub_field('video_upload');?>" type="video/mp4" >
-
 	</video>
 </section>
