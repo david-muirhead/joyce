@@ -2,6 +2,7 @@
 // If a featured image is set, insert into layout and use Interchange
 // to select the optimal image size per named media query.
 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+$url = $thumb['0'];
 if( get_field('featured_video_webm') ): ?>
 	<a href="<?php echo get_permalink( $next_post->ID ); ?>" class="link">
 	<header class="featured-hero front-vid">
