@@ -2,18 +2,20 @@
 // If a featured image is set, insert into layout and use Interchange
 // to select the optimal image size per named media query.
 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-
+$url = $thumb['0'];
 if( get_field('featured_video_webm') ): ?>
 	<header class="featured-hero">
-	<div class="video-contain"><video id="target_video" loop muted playsinline src="<?php the_field('featured_video_mp4'); ?>" type="video/mp4" poster="<?=$url?>">
-	<source src="<?php the_field('featured_video_webm'); ?>" type="video/webm">
-	<source src="<?php the_field('featured_video_mp4'); ?>" type="video/mp4">
-	<source src="<?php the_field('featured_video_ogv'); ?>" type="video/ogv">
-		Your browser does not support the video tag.
-		<div class="message">
+	<div class="video-contain">
+		<video id="target_video sds" loop muted playsinline src="<?php the_field('featured_video_mp4'); ?>" type="video/mp4" poster="<?=$url?>">
+		<source src="<?php the_field('featured_video_webm'); ?>" type="video/webm">
+		<source src="<?php the_field('featured_video_mp4'); ?>" type="video/mp4">
+		<source src="<?php the_field('featured_video_ogv'); ?>" type="video/ogv">
+			Your browser does not support the video tag.
+			<div class="message">
 
-		</div>
-	</video></div>
+			</div>
+		</video>
+	</div>
 
 <?php
 
