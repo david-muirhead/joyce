@@ -52,8 +52,10 @@
     }
     &:nth-child(2){
       @include xy-cell(6);
-      margin-right: 1rem;
-      margin-left: 1rem;
+      @include breakpoint(medium) {
+        margin-right: 1rem;
+        margin-left: 1rem;
+      }
       font-family: 'mgd-rotter-regular';
       text-align: center;
       a {
