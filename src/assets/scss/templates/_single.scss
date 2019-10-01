@@ -175,6 +175,8 @@
     padding-top: 30px;
     display: block;
     p {
+      padding-bottom: 0px;
+      margin-bottom: 0px;
       font-size: 16px;
     }
   }
@@ -190,7 +192,8 @@
   p {
     @include xy-cell(12);
     font-size: 16px;
-
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
 #full-video, .carousel {
