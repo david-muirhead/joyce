@@ -75,7 +75,7 @@
         }
       }
       @include xy-cell(12);
-      .noclick {
+      .sketchvid {
         width: 100%;
         @include breakpoint(small only) {
           .caption {
