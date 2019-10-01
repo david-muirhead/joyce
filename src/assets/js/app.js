@@ -113,7 +113,7 @@ function singlePage() {
       var $this = $(this);
       $this.waypoint(function() {
           $this.addClass('view');
-      }, { offset: '85%' });
+      }, { offset: '65%' });
   });
   if (window.screen.width > 780) {
     $('.carousel').flickity({
