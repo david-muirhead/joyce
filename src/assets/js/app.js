@@ -85,8 +85,8 @@ var $document = $(document),
     className = 'hasScrolled';
 var prevScrollpos = window.pageYOffset;
 $document.scroll(function() {
-  if ($document.scrollTop() >= 500) {
-
+  if (window.screen.width > 780) {
+    if ($document.scrollTop() >= 500) {
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.opacity = "1";
@@ -94,7 +94,17 @@ $document.scroll(function() {
         document.getElementById("navbar").style.opacity = "0";
       }
       prevScrollpos = currentScrollPos;
-
+    }
+  } else {
+    if ($document.scrollTop() >= 0) {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.opacity = "1";
+      } else {
+        document.getElementById("navbar").style.opacity = "0";
+      }
+      prevScrollpos = currentScrollPos;
+    }
   }
 });
 
