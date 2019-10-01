@@ -32,6 +32,9 @@
 					font-size: 20px;
 			}
 			a {
+					@include breakpoint(small only) {
+							font-size: 20px;
+					}
 					display: inline-block;
 					margin-bottom: 9px;
 					line-height: 20px;
