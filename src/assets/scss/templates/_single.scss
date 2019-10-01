@@ -167,12 +167,13 @@
 		}
 	}
 }
-.video-caption{
+.video-caption {
+  display: block;
   @include xy-grid-container();
     p {
       @include xy-cell(12);
       padding-top: 30px;
-      display: block;
+
       padding-bottom: 0px;
       margin-bottom: 0px;
       font-size: 16px;
