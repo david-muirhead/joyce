@@ -1,9 +1,9 @@
 
 .main-container {
   @include xy-grid-container;
-  @include breakpoint(medium) {
-    margin-top: 50px;
-  }
+  // @include breakpoint(medium) {
+  //   margin-top: 50px;
+  // }
 }
 .entry-content {
   // @include xy-cell(12);
