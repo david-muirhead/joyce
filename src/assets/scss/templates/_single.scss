@@ -98,7 +98,6 @@
       &.half{
         @include xy-cell(6);
         &:nth-child(odd) {
-          background: pink;
           margin-left: 0;
         }
         &:nth-child(even) {
