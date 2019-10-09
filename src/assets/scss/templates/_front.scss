@@ -97,6 +97,12 @@
       @include breakpoint(medium) {
         .caption {
           opacity: 0;
+          &:hover {
+            opacity: 1;
+            -webkit-transition: opacity 0.1s ease-in-out;
+            -moz-transition: opacity 0.1s ease-in-out;
+            transition: opacity 0.1s ease-in-out;
+          }
         }
       }
       .featured-hero,.featured-hero-home {
