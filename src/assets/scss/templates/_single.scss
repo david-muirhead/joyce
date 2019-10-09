@@ -98,10 +98,10 @@
       &.half{
         @include xy-cell(6);
         &:nth-child(odd) {
-          margin-left: 0;
+          margin-left: .5rem;
         }
         &:nth-child(even) {
-          margin-right: 0;
+          margin-right: .5rem;
         }
       }
     }
