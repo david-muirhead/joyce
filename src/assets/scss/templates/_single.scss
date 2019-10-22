@@ -205,7 +205,7 @@
 
 }
 .video-caption {
-  @include xy-grid-container();
+
   p {
     @include xy-cell(12);
     font-size: 16px;
