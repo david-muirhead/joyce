@@ -97,10 +97,10 @@
       padding-bottom: 30px;
       &.half{
         @include xy-cell(6);
-        &:nth-child(even) {
+        &:nth-child(odd) {
           margin-right: .5rem;
         }
-        &:nth-child(odd) {
+        &:nth-child(even) {
           margin-left: .5rem;
         }
       }
