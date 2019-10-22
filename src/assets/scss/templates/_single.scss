@@ -175,7 +175,6 @@
 }
 .video-caption {
   display: block;
-  @include xy-grid-container();
     p {
       @include xy-cell(12);
       padding-top: 30px;
