@@ -186,7 +186,6 @@
     }
 }
 #full-slider-title{
-
   @include xy-grid-container();
   span {
     @include xy-cell(12);
@@ -200,7 +199,7 @@
   }
 }
 #full-slider-title span {
-  padding-left: 0 !important;
+
 }
 #full-video {
 

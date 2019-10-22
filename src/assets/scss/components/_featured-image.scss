@@ -40,7 +40,6 @@
         position: absolute;
         padding-bottom: 3rem;
         @include xy-grid-container;
-        @include xy-grid();
       }
       h1,h2 {
         @include xy-cell(12);
