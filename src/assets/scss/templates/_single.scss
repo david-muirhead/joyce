@@ -210,11 +210,11 @@
     margin-bottom: 0;
   }
 }
-#full-video, .carousel {
- // margin-top: 80px;
- // @include breakpoint(medium) {
- //     margin-top: 160px;
- // }
+#full-video, .carousel, .lightbox-gallery {
+ margin-top: 80px !important;
+ @include breakpoint(medium) {
+     margin-top: 160px !important;
+ }
 }
 
 #full-slider-title span, #full-video {
