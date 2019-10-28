@@ -1,7 +1,7 @@
 .site-header {
   top: 0;
   margin-top:1em;
-  width: 100%;
+  @include xy-grid-container();
   display: block;
   position: fixed;
   top: 0;
@@ -41,11 +41,9 @@
       a {
         padding-top: 30px;
       }
-      @include breakpoint(medium) {
-
-      }
+      padding-right: 0.5rem;
       @media only screen and (min-width : 2000px){
-        padding-right: 0.5rem;
+
       }
     }
     &:nth-child(2){
