@@ -7,12 +7,8 @@
 ?>
 <?php endif; ?>
 
-</div>
-</div>
-</main>
-</article>
-</div>
-<div class="carousel anims">
+
+<div class="carousel full-screen anims">
 		<?php
 		foreach( $slides as $image ):
 		?>
@@ -28,8 +24,3 @@
 <div id="full-slider-title">
 	<span ><p><?php echo get_sub_field('slider_images_description'); ?></p></span>
 </div>
-<div class="main-container">
-	<div class="main-grid">
-		<main class="main-content">
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<div class="entry-content">

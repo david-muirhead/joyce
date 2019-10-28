@@ -84,10 +84,6 @@
 }
 
 .lightbox-gallery {
-	margin-top: 80px;
-  @include breakpoint(medium) {
-    	margin-top: 160px;
-  }
 	list-style: none;
 	margin-left: 0;
   @include xy-grid;
@@ -215,10 +211,10 @@
   }
 }
 #full-video, .carousel {
- margin-top: 80px;
- @include breakpoint(medium) {
-     margin-top: 160px;
- }
+ // margin-top: 80px;
+ // @include breakpoint(medium) {
+ //     margin-top: 160px;
+ // }
 }
 
 #full-slider-title span, #full-video {
@@ -503,5 +499,12 @@ footer {
   .main-container, #full-slider-title, .footer, #full-video span, #navbar, .featured-hero:not(.front-vid) .titles, .about-head,.about-main, nav, .video-caption {
     max-width: 1800px !important;
     width: 100%;
+  }
+  .site-header div:nth-child(1) {
+    margin-left: .5rem;
+  }
+  .site-header div:nth-child(3) {
+    margin-right: .5rem;
+    padding-right: 0;
   }
 }

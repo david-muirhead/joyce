@@ -1,6 +1,6 @@
 
 <section id="full-video" class="anims <?php if ( get_sub_field( 'full_screen' ) ): ?>fullspan<?php else: // field_name returned false ?>controls<?php endif; // end of if field_name logic ?>">
-	<div class="plyr__video-embed" id="<?php if ( get_sub_field( 'custom_player' ) ): ?>player<?php endif;  ?>">
+	<div class="plyr__video-embed" id="player">
 		<?php
 
 		// get iframe HTML
@@ -24,7 +24,7 @@
 		$iframe = str_replace($src, $new_src, $iframe);
 
 		if ( get_sub_field( 'custom_video_image' ) ) {
-			$eyedee = 'id="extrl"';
+			$eyedee = 'id="extrl" allowfullscreen';
 		};
 		// add extra attributes to iframe html
 		$attributes = 'frameborder="0" ' .$eyedee . '';
