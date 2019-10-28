@@ -15,7 +15,7 @@
 
 get_header(); ?>
 
-<nav>
+<nav class="anims">
 	<ul id="list">
 	<?php
 		$args = array(

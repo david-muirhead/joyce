@@ -20,41 +20,38 @@
   }
   @include xy-grid;
   div {
-    @include xy-cell(3);
     a {
       display: inline-block;
       text-decoration: none;
       padding-top: 30px;
     }
     &:nth-child(1){
-
-      padding-left: 10px;
+      @include xy-cell(1 of 5);
+      padding-left: 0.5rem;
       a {
         padding-top: 30px;
       }
       @include breakpoint(medium) {
-        margin-left: 0;
-        padding-left: 30px;
+        // margin-left: 0;
+        // padding-left: 30px;
+
       }
     }
     &:nth-child(3){
-      padding-right: 10px;
       a {
         padding-top: 30px;
       }
-      margin-right: 0;
       @include breakpoint(medium) {
-        padding-right: 30px;
+
       }
       @media only screen and (min-width : 2000px){
-        padding-right: 0;
+        padding-right: 0.5rem;
       }
     }
     &:nth-child(2){
-      @include xy-cell(6);
+      @include xy-cell(3 of 5);
       @include breakpoint(medium) {
-        margin-right: 1rem;
-        margin-left: 1rem;
+
       }
       font-family: 'mgd-rotter-regular';
       text-align: center;
@@ -73,6 +70,7 @@
       }
     }
     &:nth-child(3){
+      @include xy-cell(1 of 5);
       a {
         float: right;
       }
