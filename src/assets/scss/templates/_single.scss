@@ -462,6 +462,18 @@ footer {
 		}
 	}
 }
+
+.fullspan,.full-screen {
+    #player, #player-loop .plyr {
+
+    }
+    margin-bottom: 160px;
+    margin: 0 auto;
+    margin-left  : calc( -100vw / 2 + 100% / 2 ) !important;
+    margin-right : calc( -100vw / 2 + 100% / 2 ) !important;
+    width: 100vw !important;
+}
+
 @media only screen and (min-width : 1150px) and (max-width : 1500px){
   .footer, .main-grid {
     // padding-left: 2.5rem;
