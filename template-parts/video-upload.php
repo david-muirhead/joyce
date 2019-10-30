@@ -6,4 +6,4 @@
 	<?php endif; // end of if field_name logic ?> src="<?php echo the_sub_field('video_upload');?>" type="video/mp4" >
 	</video>
 </section>
-<span class="video-caption"><p><?php echo get_sub_field('video_upload_description'); ?></p></span>
+<span class="video-caption uploaded"><p><?php echo get_sub_field('video_upload_description'); ?></p></span>

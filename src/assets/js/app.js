@@ -56,7 +56,6 @@ function videos() {
         console.log('   // Autoplay was prevented.');
         $('.nope').attr('src', '');
         $('.uploaded').remove();
-        $('.uploaded').next('.video-caption').remove();
         $('.message').append('Autoplay was prevented. LOW POWER MODE')
       });
     }
