@@ -57,7 +57,7 @@ function videos() {
       }).catch(error => {
         console.log('   // Autoplay was prevented.');
         $('.nope').attr('src', '');
-        $("video").prop("controls",true); 
+        $('video').attr('controls',true);
         $('.hide-on-low').remove();
         $('.message').append('Autoplay was prevented. LOW POWER MODE')
       });
