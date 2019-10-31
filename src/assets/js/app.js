@@ -10,6 +10,29 @@ import Foundation from 'foundation-sites';
 import '../../../node_modules/waypoints/lib/jquery.waypoints.min.js';
 import slick from 'slick-carousel';
 
+import { isMobileView } from 'mdetect'
+
+if(!isMobileView()){
+  document.write(
+    '<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"><\/script>'+
+    '<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">'
+  );
+  $('.carousel').flickity({
+    pageDots: false,
+    imagesLoaded: true,
+    adaptiveHeight: true
+  });
+  $('.lightbox-true').each(function(){
+      $(this).slickLightbox({
+        itemSelector: '> li > a',
+        slick: {
+          infinite: false,
+          navigateByKeyboard: true,
+          slidesToShow: 1
+        }
+      });
+  });
+};
 // import barba from '@barba/core'; // Or nothing if loaded via the browser
 //
 //  // Basic default transition, with no rules and minimal hooks…
@@ -116,21 +139,7 @@ function singlePage() {
       }, { offset: '65%' });
   });
   if (window.screen.width > 780) {
-    $('.carousel').flickity({
-      pageDots: false,
-      imagesLoaded: true,
-      adaptiveHeight: true
-    });
-    $('.lightbox-true').each(function(){
-        $(this).slickLightbox({
-          itemSelector: '> li > a',
-          slick: {
-            infinite: false,
-            navigateByKeyboard: true,
-            slidesToShow: 1
-          }
-        });
-    });
+
   }
   $(function() {
      var timer;
@@ -212,12 +221,7 @@ function singlePage() {
   });
 };
 
-if (window.screen.width > 780) {
-  document.write(
-    '<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"><\/script>'+
-    '<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">'
-  )
-}
+
 $(document).ready(function(){
   indexPage();
   singlePage();
