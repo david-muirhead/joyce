@@ -108,9 +108,13 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 25%;
+  top: 30%;
   @include breakpoint(medium) {
     top: 40%;
+    h1{
+      width: 100%;
+      font-size: 32px;
+    }
   }
   margin: auto;
   text-align: center;
