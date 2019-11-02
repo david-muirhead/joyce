@@ -92,7 +92,7 @@
     // transform: translateZ(0);
 	}
 	&.loaded {
-		div,p,h1,span,h5,img {
+		div,p,h1,h2,span,h5,img {
 			opacity: 1;
 		}
 		background-color: transparent;
