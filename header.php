@@ -22,6 +22,14 @@
 		<link rel="manifest" href="/site.webmanifest">
 		<link rel="shortcut icon" href="">
 		<?php wp_head(); ?>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43841868-1"></script>
+		<script>
+		 window.dataLayer = window.dataLayer || [];
+		 function gtag(){dataLayer.push(arguments);}
+		 gtag('js', new Date());
+		 gtag('config', 'UA-43841868-1');
+		</script>
 	</head>
 	<body <?php body_class(); ?> id="body" data-barba="wrapper">
 	<!-- <?php if ( is_front_page() ) : ?>
