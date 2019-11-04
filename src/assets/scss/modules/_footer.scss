@@ -29,7 +29,7 @@ footer {
 .next-post {
   width: 100%;
   position: relative;
-  height: 250px;
+  overflow: hidden;
   @include breakpoint(medium) {
       height: 400px;
       margin: 0 auto;
@@ -48,6 +48,7 @@ footer {
     height: 100%;
     margin: 0 auto;
     display: inline-block;
+    float: left;
     &:hover {
       header {
         video {

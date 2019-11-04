@@ -8,7 +8,10 @@ get_header(); ?>
 		<main class="main-content">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<section class="about-head anims">
-					<?php the_post_thumbnail('full'); ?>
+					<span class="about-img">
+						<?php the_post_thumbnail('full'); ?>
+					</span>
+
 					<div>
 						<?php
 						$thisPagesContent = get_the_content();

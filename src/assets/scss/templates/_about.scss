@@ -6,8 +6,11 @@
 	@include xy-grid-container();
 	@include xy-grid();
 
-	img {
+	.about-img {
 		height: 100%;
+		img {
+			width: 400px;
+		}
 		@include breakpoint(small only) {
 			width: 50%;
 			margin: 80px auto 20px;
@@ -17,6 +20,7 @@
     	@include xy-cell(4, $gutters:0);
 	  }
 	}
+
 	div	{
     @include breakpoint(small only) {
       padding-top: 30px;

@@ -105,11 +105,15 @@
   float: left;
   @include xy-grid-container;
   @include xy-grid();
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 30%;
+  min-width: 100%;
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  width: 100%;
   @include breakpoint(medium) {
+    position: absolute;
+    padding-top: 0px;
+    padding-bottom: 0px;
     top: 40%;
     h1{
       width: 100%;
