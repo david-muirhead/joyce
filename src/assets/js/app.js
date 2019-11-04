@@ -116,7 +116,7 @@ function singlePage() {
       var $this = $(this);
       $this.waypoint(function() {
           $this.addClass('view');
-      }, { offset: '65%' });
+      }, { offset: '85%' });
   });
   if(! isMobileView()){
     $('.carousel').flickity({

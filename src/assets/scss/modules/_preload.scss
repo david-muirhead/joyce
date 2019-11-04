@@ -125,7 +125,7 @@
 	opacity: 1;
 	span,p,h1,h5 {
 		opacity: 0;
-			transition: opacity .6s cubic-bezier(.4,0,.2,1);
+		transition: opacity .6s cubic-bezier(.4,0,.2,1);
 	}
 	// transform: translate(50px,50px);
 	transition: background-color .6s cubic-bezier(.4,0,.2,1),transform .5s cubic-bezier(.4,0,.2,1);
