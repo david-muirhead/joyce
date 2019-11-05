@@ -22,7 +22,7 @@ if( get_field('featured_video_webm') ): ?>
 elseif ( has_post_thumbnail( $post->ID ) ) : ?>
 <header class="featured-hero" role="banner" style="  overflow:visible;">
 
-	<span href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" style="background:url('<?=$url?>') center center;    height: 100%; display: block; min-height: 300px;display:block;  background-size: cover;"></span>
+	<span href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" style="background:url('<?=$url?>') center center;    height: 100%; display: block; min-height: 200px;display:block;  background-size: cover;"></span>
 
 <?php else  :?>
 <header class="featured-hero" role="banner" >
