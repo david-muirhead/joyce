@@ -9,7 +9,7 @@
 	.about-img {
 		height: 100%;
 		img {
-			width: 400px;
+			max-width: 400px;
 		}
 		@include breakpoint(small only) {
 			width: 50%;

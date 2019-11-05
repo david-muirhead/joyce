@@ -387,7 +387,6 @@ footer {
       }
 			@extend .transition;
 			opacity: 1;
-      transition: opacity .6s cubic-bezier(.4,0,.2,1);
 			margin-top: 14px;
 			z-index: 2;
 			h5 {
@@ -449,16 +448,11 @@ footer {
 					margin-top: 0;
           @include breakpoint(medium) {
             opacity: 1;
-            transition-property: all;
-            transition-duration: .5s;
-            transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
             display: block;
-            max-height: auto;
-
           }
-          max-height: 0;
           opacity: 0;
           display: none;
+
 				}
 				&~label {
 
