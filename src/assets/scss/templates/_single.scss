@@ -475,11 +475,12 @@ footer {
     margin-right : calc( -100vw / 2 + 100% / 2 ) !important;
     width: 100vw !important;
 }
-
-@media only screen and (min-width : 1150px) and (max-width : 1500px){
+@media only screen and (min-width : 1150px) and (max-width : 1800px){
   .site-header {
     max-width: none;
   }
+}
+@media only screen and (min-width : 1150px) and (max-width : 1500px){
   .footer, .main-grid {
     // padding-left: 2.5rem;
     // padding-right: 2.5rem;
