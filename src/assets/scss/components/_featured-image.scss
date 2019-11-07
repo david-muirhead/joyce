@@ -107,8 +107,8 @@
   @include xy-grid();
   min-width: 100%;
   position: relative;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   width: 100%;
   @include breakpoint(medium) {
     position: absolute;
