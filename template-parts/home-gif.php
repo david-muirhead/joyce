@@ -11,12 +11,12 @@ if( $post_object ):
 	?>
 		<?php if ( get_sub_field( 'has_sketch' ) ): ?>
 			<?php if( get_sub_field('align_post') == 'left' ): ?>
-				<div class="left-post">
+				<div class="left-post anims">
 		    	<a href="<?php the_permalink(); ?>">
 		    	<?php get_template_part( 'template-parts/featured-image-home' ); ?>
 		    	</a>
 		    </div>
-				<div class="right-gif ">
+				<div class="right-gif  anims">
 				<?php if( get_sub_field('sketch_link') ): ?>
 					<a class="sketch-link" href="<?php echo the_sub_field('sketch_link'); ?>">
 				<?php endif; ?>
@@ -32,7 +32,7 @@ if( $post_object ):
 				<?php endif; ?>
 				</div>
 			<?php elseif( get_sub_field('align_post') == 'right' ):?>
-				<div class="left-gif ">
+				<div class="left-gif  anims">
 					<?php if( get_sub_field('sketch_link') ): ?>
 						<a class="sketch-link" href="<?php echo the_sub_field('sketch_link'); ?>">
 					<?php endif; ?>
@@ -47,7 +47,7 @@ if( $post_object ):
 						</a>
 					<?php endif; ?>
 				</div>
-				<div class="right-post ">
+				<div class="right-post  anims">
 		    	<a href="<?php the_permalink(); ?>">
 		    	<?php get_template_part( 'template-parts/featured-image-home' ); ?>
 		    	</a>
