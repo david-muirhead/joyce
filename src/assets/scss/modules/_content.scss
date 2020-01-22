@@ -8,6 +8,12 @@
 .entry-content {
   // @include xy-cell(12);
 }
+.error404 {
+  #barbadook {
+    margin-top: 8rem;
+  }
+
+}
 #video-wraps {
   @include hide-for(small only);
   display: block;

@@ -57,8 +57,8 @@ endif;
 if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
-		'page_title' 	=> 'Load Animation Settings',
-		'menu_title' 	=> 'Load Animation Settings',
-		'menu_slug' 	=> 'load-animation-settings',
+		'page_title' 	=> 'Linktree Settings',
+		'menu_title' 	=> 'Linktree Settings',
+		'menu_slug' 	=> 'linktree-settings',
 	));
 }

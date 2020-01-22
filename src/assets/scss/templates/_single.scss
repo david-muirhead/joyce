@@ -323,7 +323,7 @@ footer {
 
 	}
 	.transition{
-	  transition: all 0.25s ease-in-out;
+	  transition: all 0.25s ease-in;
 	}
   .awards-features + .credits {
     @include breakpoint(medium) {
@@ -373,6 +373,8 @@ footer {
         page-break-inside: avoid;
         break-inside: avoid;
         padding-bottom: 30px;
+        transform: translateY(0);
+        transition: all 0.25s ease-in;
       }
       div {
         width: 100%;
@@ -385,7 +387,7 @@ footer {
           width: 50%;
         }
       }
-			@extend .transition;
+      height: 100%;
 			opacity: 1;
 			margin-top: 14px;
 			z-index: 2;
@@ -445,14 +447,22 @@ footer {
 			opacity: 0;
 			&:checked {
 				&~.credits-inner  {
-					margin-top: 0;
+          height: 0;
+
+          transition: all 0.25s ease-in;
+          li {
+          	transform: translateY(-100%);
+          }
           @include breakpoint(medium) {
-            opacity: 1;
+            margin-top: 0;
+            opacity: 1 !important;
+            height: 100%;
             display: block;
+            li {
+              transform: translateY(0);
+            }
           }
           opacity: 0;
-          display: none;
-
 				}
 				&~label {
 
