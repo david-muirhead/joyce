@@ -18,11 +18,11 @@
       display: block;
       padding-bottom: 10rem;
       width: 10rem;
-      margin: 90px auto 60px auto;
+      margin: 110px auto 60px auto;
       @include breakpoint(medium) {
         padding-bottom: 15rem;
         width: 15rem;
-        margin: 120px auto 90px auto;
+        margin: 160px auto 90px auto;
       }
       border-radius: 50%;
       overflow: hidden;
@@ -38,9 +38,9 @@
       width: 100%;
       list-style: none;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 90px;
       @include breakpoint(medium) {
-        margin-bottom: 90px;
+        margin-bottom: 110px;
       }
       li {
         width: 100%;
