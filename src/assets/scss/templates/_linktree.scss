@@ -9,7 +9,8 @@
     display: none;
   }
   .link-tree {
-    @include xy-cell(12);
+    @include xy-grid-container();
+  	@include xy-grid();
     text-align: center;
     .about-img {
       background-size: cover;
@@ -27,31 +28,53 @@
       overflow: hidden;
       font-family: MGD Rotter;
     }
+    .weblink {
+      width: 100%;
+      list-style: none;
+      text-align: center;
+      margin-bottom: 40px;
+    }
     .list {
+      width: 100%;
+      list-style: none;
+      text-align: center;
       margin-bottom: 40px;
       @include breakpoint(medium) {
         margin-bottom: 90px;
       }
-      a {
-        font-family: 'mgd-rotter-regular';
-        font-size: 24px;
-        line-height: 58px;
+      li {
+        width: 100%;
+        float: left;
+        position: relative;
         text-align: center;
-        letter-spacing: -0.05em;
-        text-decoration: none !important;
-        p,span {
-          float: left;
+        a {
           display: inline-block;
-        }
-        p {
-          line-height: 58px;
-        }
-        span {
-          padding-right: 1rem;
-          text-decoration: underline;
+          font-family: 'mgd-rotter-regular';
+          text-decoration: none !important;
+          font-size: 16px;
+          line-height: 38px;
+          letter-spacing: -0.05em;
+          @include breakpoint(medium) {
+            font-size: 24px;
+            line-height: 58px;
+          }
+          p,span {
+            float: left;
+            display: inline-block;
+          }
+          p {
+            line-height: 38px;
+            margin-bottom: 0;
+            @include breakpoint(medium) {
+              line-height: 58px;
+            }
+          }
+          span {
+            padding-right: 1rem;
+            text-decoration: underline;
+          }
         }
       }
     }
-
   }
 }
