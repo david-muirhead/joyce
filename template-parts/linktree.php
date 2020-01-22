@@ -5,7 +5,6 @@ if( have_rows('linktree-links', 'options') ): ?>
 
 	// loop through rows (parent repeater)
 	while( have_rows('linktree-links', 'options') ): the_row(); ?>
-		<div class="list">
 			<?php
 
 			$link = get_sub_field('linktree-link');
@@ -21,7 +20,7 @@ if( have_rows('linktree-links', 'options') ): ?>
 				</span>
 			<?php endif; ?>
 
-		</div>
+
 
 	<?php endwhile; // while( has_sub_field('to-do_lists') ): ?>
 <?php endif; // if( get_field('to-do_lists') ): ?>
