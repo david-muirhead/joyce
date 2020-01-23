@@ -14,11 +14,22 @@
 			$src = $matches[1];
 
 			// Add option to hide controls, enable HD, and do autoplay -- depending on provider
-
 			$params = array(
 
+				$value = get_sub_field('v_options');
 
-
+				if(in_array('controls', $value)) {
+					'controls'    => 1,
+				}
+				if(in_array('portrait', $value)) {
+					'portrait'    => 1,
+				}
+				if(in_array('byline', $value)) {
+					'byline'    => 1,
+				}
+				if(in_array('title', $value)) {
+					'title'    => 1,
+				}
 			);
 
 			$new_src = add_query_arg($params, $src);
@@ -31,16 +42,8 @@
 			$video = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $video);
 		}
 
-
-
 		echo '<div class="video-embed">', $video, '</div>';
-
-		$value = get_sub_field('v_options');
-
-		 if(in_array('portrait', $value)) {
-			echo 'yew';
-		 }
-	}?>
+	} ?>
 
 	</div>
 	<?php if ( get_sub_field( 'custom_video_image' ) ): ?>
