@@ -1,13 +1,9 @@
 .page-template-link-tree {
-  .site-header div:nth-child(1) {
-    display: none;
-  }
+
   .site-header div:nth-child(2) {
     width: 100%;
   }
-  .site-header div:nth-child(3) {
-    display: none;
-  }
+
   .link-tree {
     @include xy-grid-container();
   	@include xy-grid();

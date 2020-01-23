@@ -1,6 +1,11 @@
 
 <section id="full-video" class="anims <?php if ( get_sub_field( 'full_screen' ) ): ?>fullspan<?php else: // field_name returned false ?>controls<?php endif; // end of if field_name logic ?>">
 	<div class="plyr__video-embed" id="player">
+		<?php if ( get_sub_field( 'custom_player' ) ): ?>
+			<div class="plyr__video-embed" id="player">
+		<?php else: // field_name returned false ?>
+			<div class="plyr__video-embed" >
+		<?php endif; // end of if field_name logic ?>
 		<?php
 
 		// get iframe HTML
