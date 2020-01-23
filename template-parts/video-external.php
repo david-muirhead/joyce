@@ -12,7 +12,7 @@
 
 
 		// use preg_match to find iframe src
-		preg_match('/src="(.+?api=1)"/', $iframe, $matches);
+		preg_match('/src="(.+?api=1&color=ffffff)"/', $iframe, $matches);
 		$src = $matches[1];
 
 
@@ -31,7 +31,7 @@
 			$eyedee = 'id="extrl" allowfullscreen';
 		};
 		// add extra attributes to iframe html
-		$attributes = 'frameborder="0"&color=ffffff' .$eyedee . '';
+		$attributes = 'frameborder="0"' .$eyedee . '';
 
 		$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
 
