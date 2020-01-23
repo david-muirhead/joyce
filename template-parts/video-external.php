@@ -14,20 +14,32 @@
 			$src = $matches[1];
 
 			// Add option to hide controls, enable HD, and do autoplay -- depending on provider
-				$value = get_sub_field('v_options');
-				$params = array(
-				if(in_array('controls', $value)) {
-					'controls'    => 1,
-				}
-				if(in_array('portrait', $value)) {
-					'portrait'    => 1,
-				}
-				if(in_array('byline', $value)) {
-					'byline'    => 1,
-				}
-				if(in_array('title', $value)) {
-					'title'    => 1,
-				}
+			$value = get_sub_field('v_options');
+			if(in_array('controls', $value)) {
+				$controls = 1;
+			}else {
+				$controls = 0;
+			}
+			if(in_array('portrait', $value)) {
+				$portrait = 1;
+			}else {
+				$portrait = 0;
+			}
+			if(in_array('byline', $value)) {
+				$byline = 1;
+			}else {
+				$byline = 0;
+			}
+			if(in_array('title', $value)) {
+				$title = 1;
+			}else {
+				$title = 0;
+			}
+			$params = array(
+				'controls'    => $controls,
+				'portrait'    => $portrait,
+				'byline'    => $byline,
+				'title'    => $title
 			);
 
 			$new_src = add_query_arg($params, $src);
