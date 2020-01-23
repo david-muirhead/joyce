@@ -3,7 +3,7 @@
 		<?php if ( get_sub_field( 'custom_player' ) ): ?>
 			<div class="plyr__video-embed" id="player">
 		<?php else: // field_name returned false ?>
-			<div class="plyr__video-embed" >
+			<div class="swag" id="player">
 		<?php endif; // end of if field_name logic ?>
 		<?php
 
