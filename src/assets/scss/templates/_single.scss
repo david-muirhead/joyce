@@ -169,6 +169,21 @@
 		}
 	}
 }
+
+.str8vimeo {
+     position: relative;
+     padding-bottom: 56.25%;
+     height: 0; overflow: hidden;
+     max-width: 100%; height: auto;
+ }
+ .str8vimeo iframe, .str8vimeo object, .str8vimeo embed {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+ }
+
 .video-caption {
   display: block;
   @include xy-grid-container();
@@ -476,7 +491,7 @@ footer {
 }
 
 .fullspan,.full-screen {
-    #player, #player-loop .plyr {
+    #player, #player-loop .plyr, .str8vimeo  {
 
     }
     margin-bottom: 160px;
@@ -496,7 +511,7 @@ footer {
     // padding-right: 2.5rem;
   }
   .fullspan,.full-screen {
-      #player, #player-loop .plyr {
+      #player, #player-loop .plyr, .str8vimeo {
 
       }
       max-width: 2100px;
@@ -513,7 +528,7 @@ footer {
 @media only screen and (min-width : 1500px){
 
   .fullspan,.full-screen {
-      #player, #player-loop .plyr {
+      #player, #player-loop .plyr,.str8vimeo {
 
       }
       margin-bottom: 160px;
