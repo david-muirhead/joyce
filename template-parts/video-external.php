@@ -31,7 +31,7 @@
 			$eyedee = 'id="extrl" allowfullscreen';
 		};
 		// add extra attributes to iframe html
-		$attributes = 'frameborder="0" ' .$eyedee . '';
+		$attributes = 'frameborder="0"&color=ffffff' .$eyedee . '';
 
 		$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
 
