@@ -175,10 +175,11 @@
      padding-bottom: 56.25%;
      height: 0; overflow: hidden;
      max-width: 100%; height: auto;
+     background-color: black;
  }
  .str8vimeo iframe, .str8vimeo object, .str8vimeo embed {
      position: absolute;
-     background-color: black;
+
      top: 0;
      left: 0;
      width: 100%;
