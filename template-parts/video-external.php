@@ -5,41 +5,56 @@
 		<?php else: // field_name returned false ?>
 			<div class="str8vimeo">
 		<?php endif; // end of if field_name logic ?>
-		<?php
+		<?php $video = get_sub_field('video_embed');
 
-		// get iframe HTML
-		$iframe = get_sub_field('video_embed');
+	if ( $video ) {
+		// Add autoplay functionality to the video code
+		if ( preg_match('/src="(.+?)"/', $video, $matches) ) {
+			// Video source URL
+			$src = $matches[1];
 
+			// Add option to hide controls, enable HD, and do autoplay -- depending on provider
 
-		// use preg_match to find iframe src
-		preg_match('/src="(.+?api=1&color=ffffff)"/', $iframe, $matches);
-		$src = $matches[1];
-
-
-		// add extra params to iframe src
-		$params = array(
-		    'controls'    => 1,
-		    'hd'        => 1,
-		    'autohide'    => 1
-		);
-
-		$new_src = add_query_arg($params, $src);
-
-		$iframe = str_replace($src, $new_src, $iframe);
-
-		if ( get_sub_field( 'custom_video_image' ) ) {
-			$eyedee = 'id="extrl" allowfullscreen';
-		};
-		// add extra attributes to iframe html
-		$attributes = 'frameborder="0"' .$eyedee . '';
-
-		$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+			$params = array(
 
 
-		// echo $iframe
-		echo $iframe;
 
-		?>
+			);
+
+			$new_src = add_query_arg($params, $src);
+
+			$video = str_replace($src, $new_src, $video);
+
+			// add extra attributes to iframe html
+			$attributes = 'frameborder="0" autoplay muted loop playsinline webkit-playsinline';
+
+			$video = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $video);
+		}
+
+
+
+		echo '<div class="video-embed">', $video, '</div>';
+
+		$value = get_sub_field('v_options');
+
+		 if(in_array('portrait', $value)) {
+			echo 'yew';
+		 }
+	}?>
+
+	<?php
+
+$tours = get_field('vimeo_options');?>
+
+<?php if( is_array($tours) && in_array( 'portrait', $tours ) ): ?>
+
+	<?php 	echo 'dumbcunt';?>
+
+<?php else: ?>
+
+	<?php	echo 'dumbercunt';?>
+
+<?php endif; ?>
 	</div>
 	<?php if ( get_sub_field( 'custom_video_image' ) ): ?>
 		<div class="buttons">
