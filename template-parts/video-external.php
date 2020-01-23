@@ -42,19 +42,6 @@
 		 }
 	}?>
 
-	<?php
-
-$tours = get_field('vimeo_options');?>
-
-<?php if( is_array($tours) && in_array( 'portrait', $tours ) ): ?>
-
-	<?php 	echo 'dumbcunt';?>
-
-<?php else: ?>
-
-	<?php	echo 'dumbercunt';?>
-
-<?php endif; ?>
 	</div>
 	<?php if ( get_sub_field( 'custom_video_image' ) ): ?>
 		<div class="buttons">
