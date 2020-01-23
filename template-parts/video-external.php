@@ -16,7 +16,7 @@
 			// Add option to hide controls, enable HD, and do autoplay -- depending on provider
 			$value = get_sub_field('v_options');
 
-			$color = the_sub_field('vimeo_colour');
+			$color = get_sub_field('vimeo_colour');
 
 			if(in_array('portrait', $value)) {
 				$portrait = 1;
@@ -37,7 +37,7 @@
 				'controls'    => 1,
 				'portrait'    => $portrait,
 				'byline'    => $byline,
-				'color'	=> $color,
+				'color'		=> $color,
 				'title'    => $title
 			);
 
