@@ -14,10 +14,8 @@
 			$src = $matches[1];
 
 			// Add option to hide controls, enable HD, and do autoplay -- depending on provider
-			$params = array(
-
 				$value = get_sub_field('v_options');
-
+				$params = array(
 				if(in_array('controls', $value)) {
 					'controls'    => 1,
 				}
