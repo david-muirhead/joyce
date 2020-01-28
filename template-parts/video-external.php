@@ -33,13 +33,15 @@
 			}
 
 			$color = get_sub_field('vimeo_colour');
-
+			$re = '"/#\w+\s*/"';
+			$result = preg_replace($re, '', $color);
+			$colorV = '"'+  $result +  '"';
 			$params = array(
 				'controls'    => 1,
 				'portrait'    => $portrait,
 				'byline'    => $byline,
 				'title'    => $title,
-				'color'		=> '0a0a0a'
+				'color'		=> $colorV
 			);
 
 			$new_src = add_query_arg($params, $src);
