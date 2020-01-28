@@ -53,7 +53,6 @@
 
 			$video = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $video);
 		}
-		echo $color;
 		echo '<div class="video-embed">', $video, '</div>';
 	} ?>
 
