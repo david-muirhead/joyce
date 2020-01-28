@@ -32,7 +32,7 @@
 				$title = 0;
 			}
 
-			$color = get_sub_field('vimeo_colour');
+			$color = the_sub_field('vimeo_colour');
 			$params = array(
 				'controls'    => 1,
 				'portrait'    => $portrait,
