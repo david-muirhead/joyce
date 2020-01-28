@@ -210,7 +210,7 @@ function singlePage() {
  $("#full-video .buttons").click(function(){
    $(".buttons").fadeOut();
  });
-  const players = Plyr.setup('#player, #str8vimeo', {
+  const players = Plyr.setup('#player', {
       controls: ['play-large', 'play', 'progress']
   });
 };
