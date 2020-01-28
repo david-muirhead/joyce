@@ -38,8 +38,8 @@
 				'controls'    => 1,
 				'portrait'    => $portrait,
 				'byline'    => $byline,
-				'color'		=> ''. $eyedee .'',
-				'title'    => $title
+				'title'    => $title,
+				'color'		=> '#0a0a0a'
 			);
 
 			$new_src = add_query_arg($params, $src);
