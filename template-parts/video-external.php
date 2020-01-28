@@ -17,19 +17,19 @@
 			$value = get_sub_field('v_options');
 
 			if(in_array('portrait', $value)) {
-				$portrait = 0;
-			}else {
 				$portrait = 1;
+			}else {
+				$portrait = 0;
 			}
 			if(in_array('byline', $value)) {
-				$byline = 0;
-			}else {
 				$byline = 1;
+			}else {
+				$byline = 0;
 			}
 			if(in_array('title', $value)) {
-				$title = 0;
-			}else {
 				$title = 1;
+			}else {
+				$title = 0;
 			}
 
 			$color = get_sub_field('vimeo_colour');
