@@ -39,7 +39,7 @@
 				'portrait'    => $portrait,
 				'byline'    => $byline,
 				'title'    => $title,
-				'color'		=> '#0a0a0a'
+				'color'		=> '0a0a0a'
 			);
 
 			$new_src = add_query_arg($params, $src);
