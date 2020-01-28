@@ -38,7 +38,7 @@
 				'controls'    => 1,
 				'portrait'    => $portrait,
 				'byline'    => $byline,
-				'color'		=> $color,
+				'color'		=> #9F9F9F,
 				'title'    => $title
 			);
 
