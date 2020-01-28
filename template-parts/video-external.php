@@ -27,9 +27,9 @@
 				$byline = 1;
 			}
 			if(in_array('title', $value)) {
-				$title = 1;
-			}else {
 				$title = 0;
+			}else {
+				$title = 1;
 			}
 
 			$color = get_sub_field('vimeo_colour');
