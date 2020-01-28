@@ -33,15 +33,12 @@
 			}
 
 			$color = get_sub_field('vimeo_colour');
-			$re = '"/#\w+\s*/"';
-			$result = preg_replace($re, '', $color);
-			$colorV = '"'+ $title +  '"';
 			$params = array(
 				'controls'    => 1,
 				'portrait'    => $portrait,
 				'byline'    => $byline,
 				'title'    => $title,
-				'color'		=> $colorV
+				'color'		=> $color
 			);
 
 			$new_src = add_query_arg($params, $src);
@@ -56,7 +53,7 @@
 
 			$video = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $video);
 		}
-		echo $colorV;
+
 		echo '<div class="video-embed">', $video, '</div>';
 	} ?>
 
