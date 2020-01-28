@@ -35,14 +35,14 @@
 			$color = get_sub_field('vimeo_colour');
 			$re = '"/#\w+\s*/"';
 			$result = preg_replace($re, '', $color);
+			$colorV = '"'+ $title +  '"';
 			$params = array(
 				'controls'    => 1,
 				'portrait'    => $portrait,
 				'byline'    => $byline,
 				'title'    => $title,
-				'color'		=> $result
+				'color'		=> $colorV
 			);
-
 
 			$new_src = add_query_arg($params, $src);
 
@@ -52,11 +52,11 @@
 				$eyedee = 'id="extrl" allowfullscreen';
 			};
 			// add extra attributes to iframe html
-			$attributes = 'frameborder="0" ' . $eyedee . '';
+			$attributes = 'frameborder="0" ' .$eyedee . '';
 
 			$video = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $video);
 		}
-		echo $result;
+		echo $colorV;
 		echo '<div class="video-embed">', $video, '</div>';
 	} ?>
 
