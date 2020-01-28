@@ -16,7 +16,7 @@
 			// Add option to hide controls, enable HD, and do autoplay -- depending on provider
 			$value = get_sub_field('v_options');
 
-			$color = get_sub_field('vimeo_colour');
+			$color = the_sub_field('vimeo_colour');
 
 			if(in_array('portrait', $value)) {
 				$portrait = 1;
@@ -46,7 +46,7 @@
 			$video = str_replace($src, $new_src, $video);
 
 			// add extra attributes to iframe html
-			$attributes = 'frameborder="0" autoplay muted loop playsinline webkit-playsinline';
+			$attributes = 'id="extrl" frameborder="0" autoplay muted loop playsinline webkit-playsinline';
 
 			$video = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $video);
 		}
