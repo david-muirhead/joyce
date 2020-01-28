@@ -33,7 +33,7 @@
 			}
 
 			$color = get_sub_field('vimeo_colour');
-			
+
 			$params = array(
 				'controls'    => 1,
 				'portrait'    => $portrait,
@@ -46,8 +46,11 @@
 
 			$video = str_replace($src, $new_src, $video);
 
+			if ( get_sub_field( 'custom_video_image' ) ) {
+				$eyedee = 'id="extrl" allowfullscreen';
+			};
 			// add extra attributes to iframe html
-			$attributes = 'id="extrl" frameborder="0" autoplay muted loop playsinline webkit-playsinline';
+			$attributes = 'frameborder="0" ' .$eyedee . '';
 
 			$video = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $video);
 		}

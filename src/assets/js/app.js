@@ -193,17 +193,13 @@ function singlePage() {
 };
 
  if (document.getElementById('extrl')){
-
    var iframe = document.getElementById('extrl');
-
    // $f == Froogaloop
    var player = $f(iframe);
-
    // bind events
    var playButton = document.getElementById("play-button");
-
       playButton.addEventListener("click", function() {
-     player.api("play");
+      player.api("play");
    });
  };
 
