@@ -12,6 +12,13 @@ import slick from 'slick-carousel';
 
 import { isMobileView } from 'mdetect';
 
+import fluidvids from 'fluidvids.js';
+
+
+fluidvids.init({
+  selector: ['.str8vimeo iframe'], // runs querySelectorAll()
+  players: ['www.youtube.com', 'player.vimeo.com'] // players to support
+});
 // import barba from '@barba/core'; // Or nothing if loaded via the browser
 //
 //  // Basic default transition, with no rules and minimal hooks…

@@ -53,7 +53,7 @@
 
 			$video = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $video);
 		}
-		echo '<div class="video-embed">', $video, '</div>';
+		echo  $video;
 	} ?>
 
 	</div>

@@ -171,12 +171,6 @@
 }
 
 .str8vimeo {
-     position: relative;
-     padding-bottom: 56.25%;
-     height: 0;
-     overflow: hidden;
-     max-width: 100%;
-     height: auto;
  }
  .str8vimeo iframe, .str8vimeo object, .str8vimeo embed {
      position: absolute;
@@ -274,7 +268,10 @@
       background: #fff;
       border-radius: 50%;
       box-shadow: none !important;
+      width: 4.5rem;
+      height: 4.5rem;
       svg {
+        margin: 0 auto;
         color: black !important;
       }
     }

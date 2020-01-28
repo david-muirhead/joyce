@@ -86,7 +86,7 @@
         @include breakpoint(small only) {
           .caption {
             opacity: 1 !important;
-          }
+          } 
         }
         &:hover {
           & ~ .caption {

@@ -25,6 +25,7 @@
     "responsive"
   ],
   "dependencies": {
+    "fluidvids.js": "github:toddmotto/fluidvids",
     "foundation-sites": "6.5.1",
     "imagesloaded": "^4.1.4",
     "jquery": "~3.0.0",
