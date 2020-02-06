@@ -1,6 +1,10 @@
 .main-grid {
   @include xy-grid();
   .main-content {
+    @include breakpoint(small only) {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
     width:100%;
     article {
       header {
@@ -184,6 +188,10 @@
 .video-caption {
   display: block;
   @include xy-grid-container();
+  @include breakpoint(small) {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
     p {
       @include xy-cell(12);
       padding-top: 30px;
@@ -302,6 +310,10 @@
 footer {
 	@include xy-grid-container();
 	@include xy-grid();
+  @include breakpoint(small only) {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
 	padding-bottom: 60px;
   margin-top: 60px;
 	@include breakpoint(medium) {
@@ -384,7 +396,7 @@ footer {
         padding-left: 0;
         display: block;
         margin-top: 0;
-        transition: all 1s;
+        transition: all 1s ;
         li {
           list-style: none;
           -webkit-column-break-inside: avoid;
