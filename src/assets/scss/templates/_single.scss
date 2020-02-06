@@ -384,7 +384,7 @@ footer {
         padding-left: 0;
         display: block;
         margin-top: 0;
-        transition: all 0.25s ease 0s;
+        transition: all 1s;
         li {
           list-style: none;
           -webkit-column-break-inside: avoid;
@@ -467,7 +467,7 @@ footer {
 				&~.credits-inner-wrap  {
           .credits-inner {
             height: 0;
-            transition: all 0.25s ease 0s;
+            transition: all 0.1s;
             margin-top: -100%;
             li {
 
@@ -506,9 +506,9 @@ footer {
     width: 100vw !important;
 }
 @media only screen and (min-width : 1150px) and (max-width : 1500px){
-  .site-header {
-    max-width: none;
-  }
+  // .site-header {
+  //   max-width: none;
+  // }
 }
 @media only screen and (min-width : 1150px) and (max-width : 1500px){
   .footer, .main-grid {
