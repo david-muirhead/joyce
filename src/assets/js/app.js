@@ -198,20 +198,15 @@ function singlePage() {
  		video.pause();
  	}
 };
- 
- if (document.getElementById('extrl')){
-   var iframe = document.getElementById('extrl');
-   // $f == Froogaloop
-   var player = $f(iframe);
-   // bind events
-   var playButton = document.getElementById("play-iframe");
-      playButton.addEventListener("click", function() {
-      player.api("play");
-   });
- };
+
 
  $(".buttons").click(function(){
    $(this).fadeOut();
+   var iframe = $(this).siblings(".str8vimeo").find('#extrl');
+   iframe.attr("id","SomeID");
+   var sumID = document.getElementById('SomeID');
+   $f(sumID).api('play');
+   $(sumID).attr("id","na");
  });
   const players = Plyr.setup('#player', {
       controls: ['play-large', 'play', 'progress']
