@@ -198,17 +198,17 @@ function singlePage() {
  		video.pause();
  	}
 };
-
- if (document.getElementById('extrl')){
-   var iframe = document.getElementById('extrl');
-   // $f == Froogaloop
-   var player = $f(iframe);
-   // bind events
-   var playButton = document.getElementById("play-iframe");
-      playButton.addEventListener("click", function() {
-      player.api("play");
-   });
- };
+ // 
+ // if (document.getElementById('extrl')){
+ //   var iframe = document.getElementById('extrl');
+ //   // $f == Froogaloop
+ //   var player = $f(iframe);
+ //   // bind events
+ //   var playButton = document.getElementById("play-iframe");
+ //      playButton.addEventListener("click", function() {
+ //      player.api("play");
+ //   });
+ // };
 
  $("#play-iframe").click(function(){
    $(this).fadeOut();
