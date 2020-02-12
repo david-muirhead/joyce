@@ -211,7 +211,7 @@ function singlePage() {
  };
 
  $("#full-video .buttons").click(function(){
-   $(this).fadeOut();
+   $('this').fadeOut();
  });
   const players = Plyr.setup('#player', {
       controls: ['play-large', 'play', 'progress']
