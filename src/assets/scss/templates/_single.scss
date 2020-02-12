@@ -1,8 +1,10 @@
 .main-grid {
   @include xy-grid();
   .main-content {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    @include breakpoint(medium) {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
     width:100%;
     article {
       header {
@@ -308,13 +310,11 @@
 footer {
 	@include xy-grid-container();
 	@include xy-grid();
-
-    padding-right: 1.5rem !important;
-    padding-left: 1.5rem !important;
-
 	padding-bottom: 60px;
   margin-top: 60px;
 	@include breakpoint(medium) {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
     margin-top: 180px;
 		padding-bottom: 180px;
 	}
