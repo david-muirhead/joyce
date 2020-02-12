@@ -210,8 +210,8 @@ function singlePage() {
    });
  };
 
- $("#play-iframe, #play-iframe button").click(function(){
-   $('this').fadeOut();
+ $("#full-video .buttons").click(function(){
+   $(this).fadeOut();
  });
   const players = Plyr.setup('#player', {
       controls: ['play-large', 'play', 'progress']
