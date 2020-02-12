@@ -864,9 +864,6 @@ $grid-margin-gutters: (
   medium: 20px
 );
 $grid-padding-gutters: $grid-margin-gutters;
-$grid-container-padding: (
-  small: 40px,
-  medium: 20px
-);
+$grid-container-padding: 40px;
 $grid-container-max: $global-width;
 $xy-block-grid-max: 8;

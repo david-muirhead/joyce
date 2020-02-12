@@ -204,14 +204,14 @@ function singlePage() {
    // $f == Froogaloop
    var player = $f(iframe);
    // bind events
-   var playButton = document.getElementById("play-button");
+   var playButton = document.getElementById("play-iframe");
       playButton.addEventListener("click", function() {
       player.api("play");
    });
  };
 
  $("#full-video .buttons").click(function(){
-   $(".buttons").fadeOut();
+   $(this).fadeOut();
  });
   const players = Plyr.setup('#player', {
       controls: ['play-large', 'play', 'progress']
