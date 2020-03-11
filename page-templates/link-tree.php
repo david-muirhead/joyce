@@ -14,8 +14,5 @@ get_header(); ?>
 			}
 		?>
 	</ul>
-	<span class="weblink">
-		<a href="/">Visit full website</a>
-	</span>
-</div>
+</div> 
 <?php get_footer();
