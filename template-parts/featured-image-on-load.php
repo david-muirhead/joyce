@@ -28,7 +28,7 @@ elseif ( has_post_thumbnail( $post->ID ) ) : ?>
 <span class="titles">
 <?php
 	if ( is_single() ) {
-		the_title( '<h1 class="entry-title" style="margin-left: -1px !important;" >', '</h1>' );
+		the_title( '<h1 class="entry-title" style="margin-left: 4px !important;" >', '</h1>' );
 
 	} else {
 		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
