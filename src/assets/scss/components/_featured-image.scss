@@ -43,9 +43,6 @@
         @include xy-grid-container;
       }
       h1 {
-        @include breakpoint(medium) {
-          padding-left: .27rem;
-        }
         @include breakpoint(large) {
           padding-left: .44rem;
         }
