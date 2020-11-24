@@ -73,8 +73,8 @@ footer {
           left: 50%;
           transform: translate(-50%,-50%);
         }
+        opacity: 0.5;
         @include breakpoint(medium) {
-          opacity: 0.5;
           position: relative;
            top: 50%;
            transform: translateY(-50%);
@@ -82,10 +82,9 @@ footer {
 
       }
     }
-    h2 {
-    }
   }
   img {
+    opacity: 0.5;
     position: absolute;
     display: block;
     width: 100vw;

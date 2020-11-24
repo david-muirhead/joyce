@@ -187,6 +187,7 @@
 
 .video-caption {
   display: block;
+  
   @include xy-grid-container();
   @include breakpoint(small) {
     padding-left: 0.5rem !important;

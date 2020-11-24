@@ -200,14 +200,24 @@ function singlePage() {
 };
 
 
- $(".buttons").click(function(){
-   $(this).fadeOut();
-   var iframe = $(this).siblings(".str8vimeo").find('#extrl');
-   iframe.attr("id","SomeID");
-   var sumID = document.getElementById('SomeID');
-   $f(sumID).api('play');
-   $(sumID).attr("id","na");
- });
+  $(".vimeo-player").click(function(){
+    $(this).fadeOut();
+    var iframe = $(this).siblings(".str8vimeo").find('#extrl');
+    iframe.attr("id","SomeID");
+    var sumID = document.getElementById('SomeID');
+    $f(sumID).api('play');
+    $(sumID).attr("id","na");
+  });
+
+  $(".custom-player").click(function(){
+    $(this).fadeOut(); 
+    var newframe =$(this).siblings("#player").find('iframe');;  
+    newframe.attr("id","SomeotherID");
+    var someID = document.getElementById('SomeotherID');
+    $f(someID).api('play');
+    $(someID).attr("id","na");
+  });
+
   const players = Plyr.setup('#player', {
       controls: ['play-large', 'play', 'progress']
   });

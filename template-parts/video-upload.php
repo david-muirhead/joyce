@@ -6,4 +6,4 @@
 <?php endif; // end of if field_name logic ?> src="<?php echo the_sub_field('video_upload');?>" poster="<?php the_sub_field('uploaded_video_poster'); ?>" type="video/mp4" >
 	</video>
 </section>
-<span class="<?php if ( get_sub_field( 'hide_on_low_power_ios' ) ): ?>hide-on-low<?php else:?>video-caption<?php endif;?>"><p><?php echo get_sub_field('video_upload_description'); ?></p></span>
+<span class="<?php if ( get_sub_field( 'hide_on_low_power_ios' ) ): ?>hide-on-low video-caption <?php else:?>video-caption<?php endif;?>"><p><?php echo get_sub_field('video_upload_description'); ?></p></span>

@@ -58,7 +58,7 @@
 
 	</div>
 	<?php if ( get_sub_field( 'custom_video_image' ) ): ?>
-		<div class="buttons" id="play-iframe">
+		<div class="buttons <?php if ( get_sub_field( 'custom_player' ) ): ?>custom-player<?php else: // field_name returned false ?>vimeo-player<?php endif; // end of if field_name logic ?>" id="play-iframe">
 			<img src="<?php the_sub_field('custom_video_image'); ?>" alt="" />
 			<!-- if we needed to change height/width we could use viewBox here -->
 			<span type="button" id="play-button" class="plyr__control plyr__control--overlaid plyr__tab-focus" data-plyr="play">

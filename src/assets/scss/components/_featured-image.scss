@@ -37,11 +37,15 @@
       display: block;
       margin-top: -2.3rem;
       @include breakpoint(medium) {
+
         position: absolute;
         padding-bottom: 3rem;
         @include xy-grid-container;
       }
       h1,h2 {
+        @include breakpoint(large) {
+          padding-left: 0.5rem;
+        }
         @include xy-cell(12);
       }
     }

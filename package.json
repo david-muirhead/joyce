@@ -31,6 +31,7 @@
     "jquery": "~3.0.0",
     "mdetect": "^1.2.3",
     "motion-ui": "~1.2.2",
+    "node-sass": "^4.14.1",
     "waypoints": "^4.0.1",
     "what-input": "^4.1.3"
   },
