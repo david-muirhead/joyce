@@ -42,7 +42,13 @@
         padding-bottom: 3rem;
         @include xy-grid-container;
       }
-      h1,h2 {
+      h1 {
+        @include breakpoint(large) {
+          padding-left: .27rem;
+        }
+        @include xy-cell(12);
+      }
+      h2 {
         @include breakpoint(large) {
           padding-left: 0.5rem;
         }
