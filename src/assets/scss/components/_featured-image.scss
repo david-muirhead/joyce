@@ -43,8 +43,11 @@
         @include xy-grid-container;
       }
       h1 {
-        @include breakpoint(large) {
+        @include breakpoint(medium) {
           padding-left: .27rem;
+        }
+        @include breakpoint(large) {
+          padding-left: .5rem;
         }
         @include xy-cell(12);
       }
