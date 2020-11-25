@@ -44,7 +44,7 @@
       }
       h1 {
         @include breakpoint(large) {
-          padding-left: .44rem;
+          padding-left: .3rem;
         }
         @include xy-cell(12);
       }

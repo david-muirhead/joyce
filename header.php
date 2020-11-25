@@ -12,7 +12,7 @@
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
 	<head>
-		<title>Joyce N Ho</title>
+		<title>Joyce N. Ho</title>
 		<meta name="Description" content="Hong Kong born, Australian designer, based in New York City">
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
