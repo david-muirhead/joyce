@@ -386,6 +386,8 @@ footer {
         position: relative;
         overflow: hidden;
         max-height: 800px;
+        -webkit-columns: 2;
+        columns: 2;
         @include breakpoint(small only) {
           margin-left: 0 !important;
         }
