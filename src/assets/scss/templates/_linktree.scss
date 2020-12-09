@@ -66,8 +66,11 @@
             }
           }
           span {
-            padding-right: .5rem;
             text-decoration: underline;
+            p {
+              padding-left: .5rem;
+              text-decoration: none;
+            }
           }
         }
       }
